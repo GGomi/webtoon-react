@@ -1,0 +1,29 @@
+.thumb-img {
+  width: 100%;
+
+  /* border-radius: 35%;  */
+}
+
+.thumb-title {
+  font-size: 15px;
+  text-align: center;
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  margin: 5px 0;
+  width: 100px;
+  height: 20px;
+}
+
+.webtoon-list {
+  width: 100%;
+}
+.daliy-list {
+  float:left;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.date-header {
+  background-color: rgb(218, 222, 238)
+}
