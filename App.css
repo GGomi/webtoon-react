@@ -16,7 +16,8 @@
 }
 
 .webtoon-list {
-  width: 100%;
+  
+  display: inline-block;
 }
 .daliy-list {
   float:left;
@@ -26,4 +27,10 @@
 
 .date-header {
   background-color: rgb(218, 222, 238)
+}
+
+#root {
+  width: 100%;
+  text-align: center;
+
 }
