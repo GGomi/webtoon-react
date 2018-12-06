@@ -1,7 +1,29 @@
-.thumb-img {
+@import url('https://fonts.googleapis.com/css?family=Jua|Montserrat');
+body {
   width: 100%;
+  text-align: center;
+  background-color: darkkhaki;
 
-  /* border-radius: 35%;  */
+}
+
+.title-bar {
+  background-color: white;
+  height: 40px;
+  
+}
+.btn {
+  border: none;
+  background-color: rgba( 255, 255, 255, 0 );
+  cursor: pointer;
+  
+}
+.search-btn img {
+  width: 16px;
+  height: auto;
+}
+.thumb-img {
+  width: 55%;
+  border-radius: 15%; 
 }
 
 .thumb-title {
@@ -11,26 +33,59 @@
   text-overflow: ellipsis;
   white-space: nowrap; 
   margin: 5px 0;
-  width: 100px;
-  height: 20px;
+  font-family: "Jua";
 }
 
 .webtoon-list {
-  
-  display: inline-block;
+  width: 90%;
+  display: flex;
+  margin:20px auto 0 auto;
+  justify-content: center;
+  text-align: center;
 }
 .daliy-list {
-  float:left;
+  width: 12.7%; 
+  height: 100%;
+  display: inline-block;
   text-align: center;
-  margin: 0 10px;
+  margin: 0 5px;
+  font-size: 20px;
+  background-color: antiquewhite;
 }
 
+.side {
+  border: 3px solid black;
+  
+}
 .date-header {
-  background-color: rgb(218, 222, 238)
+  font-weight: bold;
+  margin: 10px 0;
+  font-family: Montserrat;
+  border-bottom: 4px dotted black;
 }
 
-#root {
-  width: 100%;
-  text-align: center;
 
+@media only screen and (min-width: 1500px) {
+  .webtoon-list {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .webtoon-list {
+    display: inline-block;
+    margin: 20px auto 0 auto;
+    justify-content: center;
+    text-align: center;
+  }
+  .daliy-list:not(.today) {
+    display: none;
+  }
+  .daliy-list {
+    width: 80%;
+  }
+
+  .thumb-title {
+    font-size : 15px;
+  }
 }
