@@ -1,20 +1,34 @@
 import React, {Component} from 'react';
 import Webtoon from './Webtoon';
 // import Button from './Layout/TabBtn';
+import ReactModal from 'react-modal';
 import Header from './Layout/Header';
 class App extends Component {
   constructor(){
     super()
     this.state={
-      data: undefined
+      data: undefined,
+      showModal: false
     }
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
   }
-  
+
+  handleOpenModal() {
+    this.setState({ showModal: true });
+  }
+
+  handleCloseModal() {
+    this.setState({ showModal: false });
+  }
+
+
   componentDidMount() {
     document.title = "MyToon | JeongminOh";
 
     fetch("/list").then(res => res.json())
       .then(data => {
+        console.log(data);
         this.setState({
           data: data
         });
@@ -25,7 +39,10 @@ class App extends Component {
     const { data } = this.state;
     let date = new Date();
     date = date.getDay();
-    
+    // const signup = document.getElementById("signUp");
+    // signup.onclick => () {
+
+    // };
     if(date === 0) {
       date = 6;
     } else {
@@ -39,6 +56,13 @@ class App extends Component {
       
       return (
         <div>
+          <ReactModal
+            isOpen={this.state.showModal}
+            contentLabel="Modal Example"
+            className="popup-modal"
+          >
+            <button onClick={this.handleCloseModal}>닫기</button>
+          </ReactModal>
           <Header></Header>
           <div className="webtoon-list">
             {weekArr.map(function (object, i) {

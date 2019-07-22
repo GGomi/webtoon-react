@@ -6,6 +6,10 @@ body {
 
 }
 
+.popup-modal {
+  width: 60%;
+  margin: auto;
+}
 .title-bar {
   background-color: white;
   height: 40px;
