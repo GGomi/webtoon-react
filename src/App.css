@@ -169,7 +169,7 @@ input[data-function*='swipe']:checked ~ label:nth-child(3){
 }
 @media only screen and (min-width: 1500px) {
   .webtoon-list {
-    width: 90%;
+    width: 100%;
     height: 100%;
   }
 }
